@@ -1,10 +1,25 @@
-# Comunicación con Sockets (Java - Python)
+# Comunicación con Sockets (Java - Python - Web)
 
-Este proyecto consiste en una aplicación de chat desarrollada con el objetivo de demostrar la comunicación entre procesos utilizando sockets TCP.
+Este proyecto consiste en una aplicación de chat multiplataforma diseñada para demostrar la comunicación entre procesos utilizando sockets TCP.
 
-La aplicación está compuesta por:
-- Un **servidor** desarrollado en Java, capaz de gestionar múltiples conexiones concurrentes de clientes.
-- Un **cliente en Java** con interfaz gráfica construida con Swing.
-- Un **cliente en Python** con interfaz gráfica desarrollada en Tkinter.
+## Componentes
 
-Todos los componentes se comunican a través del protocolo TCP, permitiendo el envío y recepción de mensajes en tiempo real. Uno de los aspectos más importantes de este proyecto es que los clientes, a pesar de estar escritos en diferentes lenguajes de programación, pueden interactuar sin problemas gracias al uso de sockets, lo cual evidencia la interoperabilidad que ofrece este mecanismo de comunicación.
+-  **Servidor TCP en Java** — gestiona múltiples conexiones concurrentes mediante hilos.
+- **Cliente en Java (Swing)** — interfaz gráfica de escritorio.
+- **Cliente en Python (Tkinter)** — interfaz gráfica alternativa en otro lenguaje.
+- **Cliente Web (HTML, CSS, JS)** — ejecutable desde navegador mediante WebSocket.
+- **Puente TCP ↔ WebSocket (Node.js)** — permite que el cliente web se comunique con el servidor TCP.
+
+## Características
+
+- Comunicación en tiempo real entre clientes heterogéneos.
+- Interfaz gráfica en los tres clientes (Java, Python y Web).
+- Modularización del código para facilitar mantenibilidad y escalabilidad.
+- Arquitectura extensible para futuras mejoras (ej. autenticación, logs, despliegue).
+
+## Ejecución
+
+1. Iniciar el servidor Java.
+2. Ejecutar uno o más clientes (Java, Python o Web).
+3. Iniciar el puente WebSocket si se usará el cliente web (`node bridge.js`).
+4. Abrir `index.html` en el navegador.
