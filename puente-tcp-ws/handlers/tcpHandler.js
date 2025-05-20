@@ -19,9 +19,9 @@ function createTCPConnection(ws, alias) {
     });
 
     tcpClient.on('error', (err) => {
-        console.error("⚠️ Error TCP:", err.message);
+        console.error("Error TCP:", err.message);
         if (ws.readyState === ws.OPEN) {
-            ws.send("⚠️ Error al conectar con el servidor Java.");
+            ws.send("Error al conectar con el servidor Java.");
             ws.close();
         }
     });
