@@ -14,7 +14,7 @@ function createTCPConnection(ws, alias) {
     });
 
     tcpClient.on('close', () => {
-        console.log("❌ Conexión TCP cerrada");
+        console.log("Conexión TCP cerrada");
         if (ws.readyState === ws.OPEN) ws.close();
     });
 
